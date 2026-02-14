@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-df = pd.read_csv(r"E:\Predictive analysis\FeelTheBeat3\SpotifyFeatures.csv")
+df = pd.read_csv("SpotifyFeatures.csv")
 
 print(df.head())
 print(df.info())
@@ -185,3 +185,4 @@ recommendations = recommend_songs_by_mood(
     top_n=5
 )
 print(recommendations)
+
