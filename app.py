@@ -530,9 +530,9 @@ v_cols = st.columns(9)
 for idx, vibe in enumerate(vibe_data):
     with v_cols[idx]:
         is_selected = (st.session_state.selected_vibe == vibe["name"])
-        
+        vibe_label = vibe["icon"] + "\n" + vibe["name"]
         btn_click = st.button(
-            f"{vibe['icon']}\n{vibe['name']}",
+            vibe_label,
             key=f"vibe_btn_{idx}",
             use_container_width=True
         )
@@ -650,4 +650,3 @@ else:
         <p style="color:#94a3b8; font-size:14px;">Select your mood above and click 'GENERATE PLAYLIST' to begin.</p>
     </div>
     """, unsafe_allow_html=True)
-low_html=True)
